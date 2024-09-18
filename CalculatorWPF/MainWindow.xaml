@@ -1,0 +1,50 @@
+﻿<Window x:Class="CalculatorWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalculatorWPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Result Label -->
+            <RowDefinition Height="Auto"/>
+            <!-- First Number -->
+            <RowDefinition Height="Auto"/>
+            <!-- Operator -->
+            <RowDefinition Height="Auto"/>
+            <!-- Second Number -->
+            <RowDefinition Height="Auto"/>
+            <!-- Calculate Button -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Result Label -->
+        <Label Grid.Row="0" Grid.Column="0" Content="Result:" FontSize="16" VerticalAlignment="Center"/>
+        <Label Grid.Row="0" Grid.Column="1" x:Name="ResultLabel" Content="0" FontSize="16" VerticalAlignment="Center"/>
+
+        <!-- First Number TextBox -->
+        <Label Grid.Row="1" Grid.Column="0" Content="First Number:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="1" Grid.Column="1" x:Name="FirstNumberTextBox" Margin="0,10,0,0"/>
+
+        <!-- Operator TextBox 1 -->
+        <Label Grid.Row="2" Grid.Column="0" Content="Operator 1:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="2" Grid.Column="1" x:Name="OperatorTextBox1" Margin="0,10,0,0"/>
+
+        <!-- Operator TextBox 2 -->
+        <Label Grid.Row="3" Grid.Column="0" Content="Operator 2:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="3" Grid.Column="1" x:Name="OperatorTextBox2" Margin="0,10,0,0"/>
+
+        <!-- Second Number TextBox -->
+        <Label Grid.Row="4" Grid.Column="0" Content="Second Number:" VerticalAlignment="Center" Margin="0,10,0,0"/>
+        <TextBox Grid.Row="4" Grid.Column="1" x:Name="SecondNumberTextBox" Margin="0,10,0,0"/>
+
+        <!-- Calculate Button -->
+        <Button Grid.Row="4" Grid.ColumnSpan="2" Content="Calculate" Click="CalculateButton_Click" Margin="0,68,0,-48" Height="30"/>
+    </Grid>
+</Window>
